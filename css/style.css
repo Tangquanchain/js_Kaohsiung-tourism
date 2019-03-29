@@ -1,0 +1,355 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*/////////////*/
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.wrap {
+	margin: 0 auto;
+	max-width: 1024px;
+}
+
+.toppic {
+	background-image: url(../images/Hero.png);
+	background-repeat: no-repeat;
+	height: 679px;
+	z-index: -1;
+}
+
+.toppic h1 {
+	font-size: 40px;
+	text-align: center;
+	color: #fff;
+	letter-spacing: 6px;
+	/*字符間距*/
+}
+
+#listDown {
+	width: 450px;
+	height: 45px;
+	background: rgba(255, 255, 255, 0.70);
+	border: 3px solid #fff;
+	border-radius: 3px;
+	display: block;
+	margin: 0 auto;
+	margin-top: 180px;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1024px;
+	z-index: 1;
+}
+
+.hotspaceBtn {
+	background: #fff;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.30);
+	border-radius: 5px;
+	padding: 20px 30px;
+	margin: -320px auto;
+	width: 800px;
+}
+
+.btnClick1 {
+	background: #8A82CC;
+	border-radius: 5px;
+}
+
+.btnClick1:hover {
+	background: rgb(240, 160, 85);
+	transition: all 0.3s;
+}
+
+.btnClick2 {
+	background: #FFA782;
+	border-radius: 5px;
+}
+
+.btnClick2:hover {
+	background: #559AC8;
+	transition: all 0.3s;
+}
+
+.btnClick3 {
+	background: #F5D105;
+	border-radius: 5px;
+}
+
+.btnClick3:hover {
+	background: #8A82CC;
+	transition: all 0.3s;
+}
+
+.btnClick4 {
+	background: #559AC8;
+	border-radius: 5px;
+}
+
+.btnClick4:hover {
+	background: rgb(158, 69, 231);
+	transition: all 0.3s;
+}
+
+h2 {
+	text-align: center;
+	padding: 30px;
+	font-size: 15px;
+	color: rgb(243, 53, 53);
+	margin-bottom: 6px;
+	letter-spacing: 2px;
+}
+
+.btn input {
+	color: #fff;
+	font-size: 30px;
+	margin-right: 10px;
+	border-radius: 3px;
+	box-shadow: 5px;
+	cursor: pointer;
+	border: 0;
+}
+
+.dashDown {
+	/*linear-gradient(deg,0%-100%)
+	設置會是從0-100%來去做顯示如果後面%比前面低，
+	表示位置設定不正確，原因是顏色的停止點是一個增量，這時候，瀏覽器將會糾正
+	第二個顏色位置，他將會和前面一個顏色位置一樣。*/
+	background-image: linear-gradient(to right, rgb(5, 202, 252) 30%, rgb(255, 255, 255) 29%);
+	background-position: 25%;
+	background-size: 10px 1.8px;
+	/*(長度/寬度) 背景原始長寬/length指定圖片具體大小的數值，不允許負值 */
+	background-repeat: repeat-x;
+	margin-top: 370px;
+}
+
+.dashpic {
+	background: url(../images/icons_down.png) no-repeat center;
+	width: 24px;
+	height: 24px;
+	margin: 0 auto;
+	border-radius: 100%;
+	background-color: rgb(255, 255, 255);
+	border: 5px solid rgba(7, 247, 235, 0.37);
+}
+
+.dashDown::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+/*content內容*/
+
+img {
+	width: 464px;
+	height: 160px;
+}
+
+.wrap_allData {
+	justify-content: space-between;
+	/*平均分配內容元素，左右元素將會與 main start 和 main end 貼齊*/
+	flex-wrap: wrap;
+	/*這個屬性負責的是讓內容的元素換行，因為當我們把父元素的 display 設定為 flex 或 inline-flex 的時候，子元素就是以單行的方式，彈性撐滿父元素，所以就要利用 flex-wrap 來換行*/
+}
+
+.frameBox {
+	float: left;
+	width: 470px;
+	height: 360px;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.20);
+	margin: 20px 0 0 27px;
+	/*top right*/
+	background: #fff;
+	position: relative;
+}
+
+.imgPic {
+	width: 470px;
+	height: 165px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+h3 {
+	font-size: 18px;
+	font-weight: bold;
+	color: rgb(241, 250, 251);
+	text-align: left;
+	position: absolute;
+	top: 140px;
+	left: 11px;
+}
+
+h5 {
+	font-size: 16px;
+	font-weight: bold;
+	color: rgb(241, 250, 251);
+	text-align: right;
+	position: absolute;
+	top: 140px;
+	right: 14.5px;
+}
+
+.icons_Space {
+	padding: 14px 24px;
+	line-height: 30px;
+}
+
+li.icons {
+	padding-left: 30px;
+	background-position: left 0.6rem;
+	background-repeat: no-repeat;
+}
+
+._openTime {
+	background: url(../images/icons_clock.png);
+}
+
+._adress {
+	background: url(../images/icons_pin.png);
+}
+
+._tel {
+	background: url(../images/icons_phone.png);
+	margin-left: 2px;
+}
+
+._forFree {
+	background: url(https://upload.cc/i1/2019/02/06/1jFQAy.png);
+}
+
+.content::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+/*nextpage*/
+
+.nextpage {
+	width: 1024px;
+	display: block;
+	margin: 0px auto;
+	padding: 20px;
+}
+
+.list_down {
+	margin-left: 431px;
+}
+
+.list_down li {
+	float: left;
+	margin: 5px 5px 5px 15px;
+}
+
+.page-link {
+	border: 1px solid #555e69;
+	color: #555e69;
+	padding: 6px 10px;
+	font-size: 14px;
+	font-weight: 600;
+	font-family: 'Open Sans', sans-serif;
+	text-decoration: none;
+	transition: all 0.4s;
+}
+
+.page-link:hover {
+	color: #ffffff;
+	background-color: #f1a509;
+	border: 1px solid #f1a509;
+}
+
+/*.frameBox .hidframeBox {
+	display: none;
+}*/
+
+.nextpage::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+/*footer內容*/
+
+.footer {
+	background-color: rgb(103, 171, 192);
+	padding: 20px;
+	text-align: center;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.footer p {
+	color: #fff;
+	letter-spacing: 1px;
+}
+
+.footer span {
+	color: rgb(238, 238, 16);
+	letter-spacing: 2px;
+}
+
+/*top滑動按鈕*/
+
+.quit_top a {
+	background-color: #fff;
+	padding: 5px;
+	border: 2px solid rgb(17, 18, 20);
+	font-size: 25px;
+	position: fixed;
+	right: 1.5%;
+	bottom: 2%;
+	text-align: center;
+	cursor: pointer;
+	width: 25px;
+	height: 25px;
+	text-decoration: none;
+}
+
+.quit_top a:hover {
+	background-color: greenyellow;
+	transition: all 0.4s;
+}
