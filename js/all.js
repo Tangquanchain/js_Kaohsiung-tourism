@@ -207,6 +207,20 @@ function changePage(page_num) {
     //console.log(arr)
 }
 
+//clickc或change讓頁面focus在h2上
+function renderContent() {
+    $('html,body').animate({ scrollTop: $('.zoneTitle').offset().top }, 950);
+}
+
+//top按鈕
+$('.quit_top').click(function (event) {
+    /* Act on the event */
+    event.preventDefault();
+    $('html,body').animate({ scrollTop: 0 }, 600);
+});
+//top圖案
+$(".quit_top a[href$='.jpg']").addClass('fas fa-angle-double-up');
+
 
 
 
